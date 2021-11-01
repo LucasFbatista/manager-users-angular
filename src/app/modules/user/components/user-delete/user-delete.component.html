@@ -1,0 +1,17 @@
+<a class="delete">
+  <fa-icon [icon]="icons.faTrash" userId="userId" class="fa-1x text-danger" (click)="open(deleteModal)"></fa-icon>
+</a>
+<ng-template #deleteModal let-modal>
+  <div class="modal-header">
+    <h3 class="modal-title" id="modal-basic-title">Confirmação</h3>
+    <button type="button" class="close btn btn-danger btn-sm" aria-label="Close" (click)="modal.dismiss(false)">
+      <span aria-hidden="true">x</span>
+    </button>
+  </div>
+  <div class="modal-body text-center">
+    <h4>Tem certeza que deseja excluir esse usuário?</h4>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close(true)">Sim</button>
+  </div>
+</ng-template>

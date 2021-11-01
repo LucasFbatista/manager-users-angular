@@ -1,18 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+//ROUTES
 import { AppRoutingModule } from './app-routing.module';
+
+//MODULES
+import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { UserModule } from './modules/user/user.module';
+import { AboutModule } from './modules/about/about.module';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+
+//COMPONENTS
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './core/template/nav-bar/nav-bar.component';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavBarComponent
-  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DashboardModule,
+    UserModule,
+    AboutModule,
+    CoreModule,
+    SharedModule,
+  ],
+  declarations: [
+    AppComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

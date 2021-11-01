@@ -1,0 +1,75 @@
+@keyframes animateCardBox {
+  0%{
+      transform: translateX(-100px);
+      opacity: 0;
+  }
+  50%{
+      opacity: .3;
+  }
+  100%{
+      transform: translateX(0px);
+      opacity: 1;
+
+  }
+}
+@keyframes animateCardBoxHitory {
+  0%{
+      transform: translateX(100px);
+      opacity: 0;
+  }
+  50%{
+      opacity: .3;
+  }
+  100%{
+      transform: translateX(0px);
+      opacity: 1;
+
+  }
+}
+h1{
+  text-align: center;
+}
+.container-dash{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px 0px 0px 70px;
+  p{
+    margin-top: 10px;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .card{
+    padding: 20px;
+    margin: 15px 25px 0px 0px;
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-left: solid 5px rgba(76, 241, 117, 0.582);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    animation-name: animateCardBox;
+    animation-duration: .8s;
+  }
+  .card:hover{
+    transform: scale(1.01);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    cursor: pointer;
+  }
+  .card-history{
+    width: 67vw;
+    height: auto;
+    padding-bottom: 60px;
+    border-radius: 5px;
+    border-left: solid 5px rgba(238, 241, 76, 0.787);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    animation-name: animateCardBoxHitory;
+    animation-duration: .8s;
+  }
+  .card-history:hover{
+    transform: scale(1.01);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    cursor: pointer;
+  }
+}

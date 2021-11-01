@@ -1,0 +1,32 @@
+@keyframes animateContentCreateUser {
+  0%{
+      transform: translateX(-100px);
+      opacity: 0;
+  }
+  50%{
+      opacity: .3;
+  }
+  100%{
+      transform: translateX(0px);
+      opacity: 1;
+
+  }
+}
+.container-create-users{
+  margin: 5% auto;
+  font-size: 1.2em;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  border-left: solid 5px rgba(76, 92, 241, 0.582);
+  width: 50.5%;
+  height: auto;
+
+  animation-name: animateContentCreateUser;
+  animation-duration: .8s;
+
+  manager-button{
+    margin-right: 10px;
+  }
+}

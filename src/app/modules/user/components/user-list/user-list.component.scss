@@ -1,0 +1,27 @@
+.container-table{
+  margin: auto;
+  width: 90%;
+  color: rgb(88, 88, 88);
+  font-size: 1.2em;
+
+  table{
+    fa-icon {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+.role-container{
+  text-align: center;
+}
+
+.form-group {
+  float: right;
+  padding: 28px;
+
+  label{
+    margin-left: 8.5px;
+    font-size: 1.1em;
+  }
+}

@@ -1,7 +1,8 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
+//CONFIG FILE TEST
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "types": ["jasmine", "node"],
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

@@ -1,0 +1,96 @@
+<manager-header
+  headerTitle="{{ id ? 'Edição de usuário' : 'Cadastro de usuários' }}"
+  [iconButton]="id ? icons.faUserEdit : icons.faUserPlus">
+</manager-header>
+<div class="container-create-users" *ngIf="cadastro">
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-12 text-center mt-3">
+        <h1 class="text-secondary">
+          Usuário
+        </h1>
+      </div>
+    </div>
+    <div class="row justify-content-center mb-5">
+      <div class="col-sm-12 col-md-10 col-lg-8">
+        <form [formGroup]="cadastro" (ngSubmit)="createOrUpdate()" (ngReset)="resetForm()">
+          <div class="form-row">
+            <div class="form-group col-sm-12 mb-3">
+              <label for="name">Nome:</label>
+              <input type="text"
+                class="{`form-control {{ f.name.invalid && (f.name.dirty || f.name.touched) ? 'form-control is-invalid' : 'form-control' }} `}"
+                id="name" placeholder="Name" formControlName="name">
+              <div class="invalid-feedback d-block" *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)">
+                <div *ngIf="f.name.errors?.required">
+                  Campo obrigatório.
+                </div>
+                <div *ngIf="f.name.errors?.minlength">
+                  Campo precisa ter no minimo 2 caracteres.
+                </div>
+                <div *ngIf="f.name.errors?.maxlength">
+                  Campo precisa ter no máximo 256 caracteres.
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-sm-12 mb-3">
+              <label for="email">E-mail:</label>
+              <input type="text"
+                class="{`form-control {{ f.email.invalid && (f.email.dirty || f.email.touched) ? 'form-control is-invalid' : 'form-control' }} `}"
+                id="email" placeholder="Email" formControlName="email">
+              <div class="invalid-feedback d-block" *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)">
+                <div *ngIf="f.email.errors?.email">
+                  Email inválido.
+                </div>
+                <div *ngIf="f.email.errors?.required">
+                  Campo obrigatório.
+                </div>
+                <div *ngIf="f.email.errors?.maxlength">
+                  Campo precisa ter no máximo 256 caracteres.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-sm-12 mb-3">
+              <label for="password">Senha:</label>
+              <input type="password"
+                class="{`form-control {{ f.password.invalid && (f.password.dirty || f.password.touched) ? 'form-control is-invalid' : 'form-control' }} `}"
+                id="password" placeholder="Password" formControlName="password">
+              <div class="invalid-feedback d-block"
+                *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)">
+                <div *ngIf="f.password.errors?.required">
+                  Campo obrigatório.
+                </div>
+                <div *ngIf="f.password.errors?.minlength">
+                  Campo precisa ter no minimo 6 caracteres.
+                </div>
+                <div *ngIf="f.password.errors?.maxlength">
+                  Campo precisa ter no máximo 20 caracteres.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-sm-4">
+              <label for="isAdmin">Administrador:</label>
+              <select name="isAdmin" id="isAdmin" class="form-control" formControlName="isAdmin">
+                <option *ngFor="let option of options" [value]="option.value">{{ option.name }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row mt-4 mb-5">
+            <div class="col-sm-12">
+              <manager-button name="{{id ? 'Atualizar' : 'Salvar'}}" classBtn="success" [iconsButton]="icons.faSave"
+                type="submit" [showOrHide]="!cadastro.valid" url="{`{{ id ? '/users/create' : '/users' }} `}">
+              </manager-button>
+              <manager-button name="Cancelar" classBtn="secondary" [iconsButton]="icons.faWindowClose" url="/users"
+                type="reset">
+              </manager-button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

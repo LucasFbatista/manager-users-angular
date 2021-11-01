@@ -1,0 +1,29 @@
+@keyframes animateContentAbout {
+  0%{
+      transform: translateX(100px);
+      opacity: 0;
+  }
+  50%{
+      opacity: .3;
+  }
+  100%{
+      transform: translateX(0px);
+      opacity: 1;
+
+  }
+}
+.container-about{
+  margin: 5% auto;
+  font-size: 1.2em;
+  justify-content: center;
+  box-shadow: rgba(85, 85, 85, 0.2) 0px 2px 8px 0px;
+  padding: 30px;
+  background-color: rgb(255, 255, 255);
+  border-left: solid 5px rgba(76, 241, 117, 0.582);
+  border-radius: 5px;
+  border-right: solid 5px rgba(76, 241, 117, 0.582);
+  width: 50.5%;
+  height: auto;
+  animation-name: animateContentAbout;
+  animation-duration: .8s;
+}

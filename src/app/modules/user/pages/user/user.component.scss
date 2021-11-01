@@ -1,0 +1,32 @@
+@keyframes animateTable {
+  0%{
+      transform: translateX(-100px);
+      opacity: 0;
+  }
+  50%{
+      opacity: .3;
+  }
+  100%{
+      transform: translateX(0px);
+      opacity: 1;
+
+  }
+}
+
+.container-button {
+  margin: 50px 0px 20px 128px;
+  animation-name: animateTable;
+  animation-duration: .8s;
+}
+.container-list-users {
+  overflow-x: hidden;
+  margin: 2% 7.1%;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(255, 255, 255);
+  width: 89.5%;
+  height: 50vh;
+  animation-name: animateTable;
+  animation-duration: .8s;
+  padding-bottom: 80px;
+}

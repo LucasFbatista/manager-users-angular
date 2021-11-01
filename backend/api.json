@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "name": "Joao da Silva Gomes",
+      "email": "fulano_silva@gmail.com",
+      "password": "15515515",
+      "isAdmin": "false",
+      "id": 1
+    },
+    {
+      "name": "J&L Comercial",
+      "email": "comercialjlmachado@gmail.com",
+      "password": "asdasdasda",
+      "isAdmin": "true",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Ciclano da Silva",
+      "email": "ciclano_silva@gmail.com",
+      "password": "15515515",
+      "isAdmin": "false"
+    },
+    {
+      "name": "Lucas Ferreira",
+      "email": "lucasfbferreira@outlook.com",
+      "password": "lucas1019",
+      "isAdmin": "true",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Ciclano da Silva",
+      "email": "ciclano_silva@gmail.com",
+      "password": "15515515",
+      "isAdmin": "false"
+    },
+    {
+      "id": 6,
+      "name": "Ciclano da Silva",
+      "email": "ciclano_silva@gmail.com",
+      "password": "15515515",
+      "isAdmin": "false"
+    }
+  ]
+}

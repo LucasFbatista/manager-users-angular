@@ -1,8 +1,28 @@
-img{
-  margin: 0px 15px 0px 20px;
+nav{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  box-shadow: rgba(179, 178, 178, 0.3) 0px 10px 38px;
+
+  a{
+    text-align: center;
+    font-weight: bold;
+    color: rgb(75, 73, 73);
+
+    img{
+      margin: 0px 15px 0px 20px;
+    }
+  }
 }
 
-a{
-  text-align: center;
-  font-weight: bold;
+fa-icon{
+  cursor: pointer;
+  margin-right: 40px;
+
+  &:hover{
+    opacity: 0.8;
+    color: rgb(241, 76, 125)
+  }
 }
+

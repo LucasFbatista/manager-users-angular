@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavBarComponent } from './nav-bar.component';
 
-describe('NavBarComponent', () => {
+describe(`${NavBarComponent.name}`, () => {
   let component: NavBarComponent;
   let fixture: ComponentFixture<NavBarComponent>;
 
@@ -11,15 +11,14 @@ describe('NavBarComponent', () => {
       declarations: [ NavBarComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(NavBarComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Deve criar o component NavBar', () => {
+    fixture.detectChanges();
+    expect(component).toBeDefined();
     expect(component).toBeTruthy();
   });
 });

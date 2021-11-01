@@ -1,0 +1,46 @@
+<div class="form-group row">
+  <label for="search" class="col-sm col-form-label">Pesquisar:</label>
+  <div class="col-sm-8">
+    <input type="text" class="form-control" placeholder="search..." name="filter" [(ngModel)]="filter">
+  </div>
+</div>
+<div class="container-table">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Senha</th>
+        <th scope="col" class="text-center">Permissão</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of filteredUsers">
+        <td scope="row">{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td> ****** </td>
+        <div class="role-container">
+          <div *ngIf=" user.isAdmin === 'true'; else roleTemplate">
+            <span class="badge bg-success">
+              <td>{{ user.isAdmin | role }}</td>
+            </span>
+          </div>
+          <ng-template #roleTemplate>
+            <span class="badge bg-warning">
+              <td>{{ user.isAdmin | role }}</td>
+            </span>
+          </ng-template>
+        </div>
+        <td>
+          <a routerLink="create/{{user.id}}" class="edit">
+            <fa-icon [icon]="icons.faPen" class="fa-1x text-secondary"></fa-icon>
+          </a>
+          <manager-user-delete userId={{user.id}}></manager-user-delete>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
