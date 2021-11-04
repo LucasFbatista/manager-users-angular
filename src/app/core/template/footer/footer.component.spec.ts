@@ -22,4 +22,24 @@ describe(`${FooterComponent.name}`, () => {
     expect(component).toBeDefined();
     expect(component).toBeTruthy();
   });
+
+  it('(D) Deve carregar o titulo("Desenvolvido por Lucas Ferreira" (tag: span))', () => {
+    fixture.detectChanges();
+    const titleComponent = fixture.nativeElement.querySelector('span');
+    expect(titleComponent.textContent.trim()).toBe("Desenvolvido por Lucas Ferreira");
+  });
+
+  it('(D) Deve carregar a class("container-images" (tag: ul))', () => {
+    fixture.detectChanges();
+    const classContainer = fixture.nativeElement.querySelector('.container-images');
+    expect(classContainer).toBeDefined();
+    expect(classContainer).toBeTruthy();
+  });
+
+  it('(D) Deve carregar as imagens("container-images" (tag: img))', () => {
+    fixture.detectChanges();
+    const classContainer = fixture.nativeElement.querySelector('.container-images > li > img');
+    expect(classContainer).toBeDefined();
+    expect(classContainer).toBeTruthy();
+  });
 });

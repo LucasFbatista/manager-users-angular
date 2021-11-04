@@ -9,14 +9,10 @@ describe(`${UserComponent.name}`, () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ UserComponent ]
-    })
-    .compileComponents();
-  });
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(UserComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('Dever criar o component UserComponent', () => {

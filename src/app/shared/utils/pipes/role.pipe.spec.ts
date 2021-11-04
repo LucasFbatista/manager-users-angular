@@ -1,12 +1,14 @@
 import { RoleUserPipe } from './role.pipe';
 
-xdescribe(`${RoleUserPipe.name}`, () => {
+describe(`${RoleUserPipe.name}`, () => {
 
-  beforeEach(() => {
+  const rolePipe = new RoleUserPipe();
 
+  it('Deve retornar uma string(Administrador)', () => {
+    expect(rolePipe.transform("true")).toBe("Administrador");
   });
 
-  it('Deve Criar.', () => {
-
+  it('Deve retornar uma string(Usuário)', () => {
+    expect(rolePipe.transform("false")).toBe("Usuário");
   });
 });

@@ -21,11 +21,13 @@ export class UserListComponent implements OnInit {
   public filteredUsers!: User[];
   public _filterBy!: string;
 
-  public renderComponent!:true;
-
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
+    this.listUsers();
+  }
+
+  public listUsers(): void {
     this.getAllUsers();
   }
 

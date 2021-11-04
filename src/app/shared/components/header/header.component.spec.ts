@@ -22,4 +22,13 @@ describe(`${HeaderComponent.name}`, () => {
   it('Deve criar o component Header', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Deve verificar se o (@Input: headerTitle) foi mostrado corretamente', () => {
+    fixture.detectChanges();
+    component.headerTitle = "Carregou o Titulo";
+    fixture.detectChanges();
+    const titleHeader = fixture.nativeElement.querySelector(".header-content");
+    expect(titleHeader.textContent.trim()).toBe(component.headerTitle);
+  });
+
 });

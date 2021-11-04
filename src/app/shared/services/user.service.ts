@@ -1,9 +1,8 @@
-import { Observable } from 'rxjs';
+import { Observable, EMPTY } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 import { map } from 'rxjs/operators';
 import { catchError } from 'rxjs/operators';
-import { EMPTY } from 'rxjs';
 
 //MODULES
 import { HttpClient } from '@angular/common/http';

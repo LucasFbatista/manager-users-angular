@@ -11,17 +11,19 @@ describe(`${AboutComponent.name}`, () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ AboutModule ]
-    })
-    .compileComponents();
-  });
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(AboutComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('Deve criar o component About', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('Deve carregar o titulo do component manager-header(titulo: "Sobre")', () => {
+    fixture.detectChanges();
+    const titleHeader = fixture.nativeElement.querySelector("manager-header");
+    expect(titleHeader.textContent.trim()).toBe("Sobre");
   });
 });

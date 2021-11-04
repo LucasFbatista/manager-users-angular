@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+
+import { CoreModule } from './../../core.module';
 import { SideBarComponent } from './side-bar.component';
 
 describe(`${SideBarComponent.name}`, () => {
@@ -8,7 +10,7 @@ describe(`${SideBarComponent.name}`, () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SideBarComponent ]
+      imports:[CoreModule]
     })
     .compileComponents();
 
@@ -20,5 +22,12 @@ describe(`${SideBarComponent.name}`, () => {
     fixture.detectChanges();
     expect(component).toBeDefined();
     expect(component).toBeTruthy();
+  });
+
+  it('Deve carregar a class de links("side-bar-list-item")', () => {
+    fixture.detectChanges();
+    const sideBarLink = fixture.nativeElement.querySelector(".side-bar-list-item");
+    expect(sideBarLink).toBeDefined();
+    expect(sideBarLink).toBeTruthy();
   });
 });
