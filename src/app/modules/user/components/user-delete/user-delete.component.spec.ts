@@ -1,9 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserModule } from '../../user.module';
-import { SharedModule } from 'src/app/shared/shared.module';
-import { UserService } from 'src/app/shared/services/user.service';
-
 import { UserDeleteComponent } from './user-delete.component';
 
 describe(`${UserDeleteComponent.name}`, () => {
@@ -12,11 +9,7 @@ describe(`${UserDeleteComponent.name}`, () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports:[
-        UserModule,
-        SharedModule
-      ],
-      providers:[ UserService ]
+      imports:[ UserModule ]
     })
     .compileComponents();
 

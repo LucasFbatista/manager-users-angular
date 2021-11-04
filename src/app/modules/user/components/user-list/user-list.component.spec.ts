@@ -1,8 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharedModule } from 'src/app/shared/shared.module';
-import { UserModule } from '../../user.module';
 
+import { UserModule } from '../../user.module';
 import { UserListComponent } from './user-list.component';
 
 describe(`${UserListComponent.name}`, () => {
@@ -13,7 +12,6 @@ describe(`${UserListComponent.name}`, () => {
     await TestBed.configureTestingModule({
       imports:[
         UserModule,
-        SharedModule
       ]
     }).compileComponents();
 

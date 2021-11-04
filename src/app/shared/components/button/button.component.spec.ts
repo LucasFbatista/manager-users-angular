@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { SharedModule } from '../../shared.module';
 
 import { ButtonComponent } from './button.component';
 
@@ -8,7 +10,7 @@ describe(`${ButtonComponent.name}`, () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ButtonComponent ]
+      imports: [ RouterTestingModule, SharedModule ]
     })
     .compileComponents();
   });

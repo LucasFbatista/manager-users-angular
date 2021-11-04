@@ -2,8 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { UserModule } from '../../user.module';
-import { SharedModule } from 'src/app/shared/shared.module';
-
 import { UserService } from 'src/app/shared/services/user.service';
 import { UserCreateComponent } from './user-create.component';
 
@@ -13,7 +11,10 @@ describe(`${UserCreateComponent.name}`, () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UserModule, SharedModule, RouterTestingModule],
+      imports: [
+        RouterTestingModule,
+        UserModule
+      ],
       providers: [UserService],
     }).compileComponents();
 

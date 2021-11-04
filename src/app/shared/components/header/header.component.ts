@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+import { faChartLine } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'manager-header',
@@ -9,5 +10,5 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent{
 
   @Input() public headerTitle!: string;
-  @Input() public iconButton!: any;
+  @Input() public iconHeader?: any = this.iconHeader ? this.iconHeader : faChartLine;
 }
