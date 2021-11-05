@@ -32,13 +32,17 @@ export class UserDeleteComponent {
       .result.then(
         (result) => {
           if(!!result){
-            this.deleteUser();
+            this.delete();
           }
         },
         (reason) => {
-          this.getDismissReason(reason)
+          this.getDismissReason(reason);
         }
       );
+  }
+
+  public delete(): void {
+    this.deleteUser();
   }
 
   private deleteUser(): void {

@@ -17,7 +17,7 @@ describe(`${UserDeleteComponent.name}`, () => {
     component = fixture.componentInstance;
   });
 
-  it('Deve criar o component UserDelete', () => {
+  it(`Deve criar o component ${UserDeleteComponent.name}`, () => {
     expect(component).toBeTruthy();
   });
 
@@ -26,5 +26,12 @@ describe(`${UserDeleteComponent.name}`, () => {
     component.open("#deleteModal");
     expect(component.open).toHaveBeenCalled();
     expect(component.open).toHaveBeenCalledTimes(1);
-  })
+  });
+
+  it(`Deve chamar a funcao (${UserDeleteComponent.prototype.delete.name})`, () => {
+    spyOn(component, 'delete');
+    component.delete();
+    expect(component.delete).toHaveBeenCalled();
+    expect(component.delete).toHaveBeenCalledTimes(1);
+  });
 });
